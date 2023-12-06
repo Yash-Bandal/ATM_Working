@@ -70,4 +70,4 @@ int main(){
    while(opt=='y'||opt=='Y');
 
 }
-//Credit-https://github.com/MaheshwaryNarkhede/ATM/blob/main/atm.cpp
+//Ref-https://github.com/MaheshwaryNarkhede/ATM/blob/main/atm.cpp
