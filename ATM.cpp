@@ -20,7 +20,7 @@ class ATM
         }
         balance=balance -amount;
         return true;
-       
+    
     }
     void deposit(int amount){
         balance=balance+amount;
