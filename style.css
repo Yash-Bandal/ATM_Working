@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3fcf7, #f9ebff);
+    padding: 10px;
+}
+
+.todo-app {
+    /* position: relative; */
+    /* width: 100%; */
+    width: 40%;
+    max-height: 540px;
+    background: #fff;
+    /* top leftright bottom  */
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+.todo-app:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+}
+
+.todo-app h2 {
+    padding-left: 10px;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#sm {
+    padding-left: 10px;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+
+.todo-app img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.btn1 {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    /* ff59 is good yellow  */
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* its the circle before clicking  */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url(assets/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* its the ticked img  */
+ul li.checked::before {
+    background-image: url(assets/images/checked.png);
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+#list-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* scrollbar  */
+#list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 1080px) {
+    .todo-app {
+        width: 80%;
+        padding: 30px 20px 50px;
+    }
+
+    .btn1 {
+        width: 20%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todo-app {
+        width: 95%;
+        padding: 20px 15px 40px;
+    }
+
+    .btn1 {
+        width: 40%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 15px;
+    }
+}
