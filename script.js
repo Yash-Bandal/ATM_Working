@@ -21,7 +21,20 @@ function addTask() {
     saveData()
 }
 
+//When enter pressed..also call the addTask
+function AddOnEnter() {
+    let btn1 = document.getElementById('btn1');
+    document.addEventListener('keydown', (e) => {
+        // console.log(e, e.key, e.keyCode)
+        if (e.key === "Enter" && document.activeElement === inputBox) {
+            addTask();
+        }
+    });
+}
+AddOnEnter()
 
+
+//Handling toggling removing and all
 disp.addEventListener('click', (e) => {
     //If we click on LI it should add the checked classname
     // and if "checked" classname already there..it will be removed
