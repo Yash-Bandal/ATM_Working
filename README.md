@@ -7,7 +7,7 @@ A simple To-Do app to manage tasks. Built with HTML, CSS, and JavaScript.
 - Add and remove tasks
 - Mark tasks as complete
 - Responsive design
-- Cache Store
+- Cache Store 
  
  
   
